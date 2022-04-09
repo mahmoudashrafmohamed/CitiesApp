@@ -5,17 +5,17 @@ On this app our users will be able to see cities of the world with the name of t
 
 ## Tech Stack
 - kotlin 
-- Single Activity.
-- Modular (improve developing time and productivity by reduce build time reason and only rebuild only modified modules)
+- Single activity architecture.
+- Modular architecture(improve developing time and productivity by reduce the build time through rebuild only modified modules).
 - Clean Architecure with MVVM and State Management.
 - Rxjava3.
-- Retrofit2.
 - Google Material design.
-- recycler view.
-- ConstraintLayout.
+- View binding.
 - viewmodel and live data.
 - Room db.
-- View binding.
+- recycler view.
+- ConstraintLayout.
+- Retrofit2.
 
 ## unit test
 - Junit4.
