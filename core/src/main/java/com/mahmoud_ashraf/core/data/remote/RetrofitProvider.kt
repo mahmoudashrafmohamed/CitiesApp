@@ -1,5 +1,6 @@
 package com.mahmoud_ashraf.core.data.remote
 
+import com.mahmoud_ashraf.core.BuildConfig
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -30,10 +31,9 @@ val retrofit: Retrofit by lazy {
         .client(okHttpClient)
         .addCallAdapterFactory(RxJava3CallAdapterFactory.create())
         .addConverterFactory(GsonConverterFactory.create())
-        .baseUrl(baseUrl)
+        .baseUrl(BuildConfig.BASE_URL)
         .build()
 }
 
 inline fun <reified T : Any> buildApi(): T = retrofit.create(T::class.java)
 
-const val baseUrl = ""
