@@ -10,7 +10,7 @@ object Fragments {
         override val className: String = "com.mahmoud_ashraf.citieslist.presentation.fragment.CitiesListFragment"
     }
     object MapFragment : AddressableFragment {
-        override val className: String = ""
+        override val className: String = "com.mahmoud_ashraf.map.presentation.fragment.MapFragment"
     }
 
 
