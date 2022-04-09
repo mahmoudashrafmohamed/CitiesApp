@@ -14,21 +14,32 @@ fun <T> Fragment.observe(liveData: LiveData<T>, observer: (T) -> Unit) {
     liveData.observe(this, Observer { it?.let(observer) })
 }
 
-fun Fragment.addFragment( addressableFragment: AddressableFragment,containerId : Int= fragmentContainerId,bundle: Bundle?=null) {
-    val fragment : Fragment= fragmentOf(addressableFragment)
-       fragment.arguments = bundle
-    this.activity?.supportFragmentManager?.beginTransaction()
-        ?.add(containerId,fragment)
-        ?.addToBackStack(addressableFragment.className)
-        ?.commit()
+fun Fragment.addFragment(
+    addressableFragment: AddressableFragment,
+    containerId: Int = fragmentContainerId,
+    bundle: Bundle? = null,
+    addToBackStack: Boolean = true
+) {
+    val fragment: Fragment = fragmentOf(addressableFragment)
+    fragment.arguments = bundle
+    val ft = this.activity?.supportFragmentManager?.beginTransaction()
+        ?.add(containerId, fragment)
+    if (addToBackStack)
+        ft?.addToBackStack(addressableFragment.className)?.commit()
+    else
+        ft?.commit()
 
 }
 
-fun AppCompatActivity.replaceFragment( addressableFragment: AddressableFragment,containerId : Int= fragmentContainerId,bundle: Bundle?=null) {
-    val fragment : Fragment= fragmentOf(addressableFragment)
-       fragment.arguments = bundle
+fun AppCompatActivity.replaceFragment(
+    addressableFragment: AddressableFragment,
+    containerId: Int = fragmentContainerId,
+    bundle: Bundle? = null
+) {
+    val fragment: Fragment = fragmentOf(addressableFragment)
+    fragment.arguments = bundle
     supportFragmentManager.beginTransaction()
-        .replace(containerId,fragment)
+        .replace(containerId, fragment)
         .commit()
 
 }
