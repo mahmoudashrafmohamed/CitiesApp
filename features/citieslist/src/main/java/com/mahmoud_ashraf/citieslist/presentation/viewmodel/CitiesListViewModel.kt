@@ -21,10 +21,10 @@ class CitiesListViewModel(
     private var allPagesIsLoaded = false
     private val citiesCachedList = mutableListOf<CitiesResponse.Item>()
 
-    fun getCities() {
+    fun getCities(page : Int =pageNumber ,cityName: String? = this.cityName) {
         if (allPagesIsLoaded) return
         screenState.postValue(CitiesListScreenState.Loading)
-        getCitiesListUseCase.fetch(pageNumber, cityName)
+        getCitiesListUseCase.fetch(page, cityName)
             .observeOn(backgroundScheduler)
             .subscribeOn(backgroundScheduler)
             .subscribe({
