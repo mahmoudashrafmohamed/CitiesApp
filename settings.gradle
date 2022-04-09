@@ -15,3 +15,6 @@ dependencyResolutionManagement {
 rootProject.name = "CitiesApp"
 include ':app'
 include ':core'
+include ':features:citieslist'
+include ':features:map'
+include ':features:splash'
