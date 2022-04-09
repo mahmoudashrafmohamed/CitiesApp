@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/mahmoud_ashraf/AndroidStudioProjects/CitiesApp2/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/mahmoud_ashraf/AndroidStudioProjects/CitiesApp2/features/citieslist/src/main/res/layout/fragment_cities_list.xml" value="0.25" />
         <entry key="..\:/Users/mahmoud_ashraf/AndroidStudioProjects/CitiesApp2/features/splash/src/main/res/drawable/ic_splash_icon.xml" value="0.192" />
         <entry key="..\:/Users/mahmoud_ashraf/AndroidStudioProjects/CitiesApp2/features/splash/src/main/res/layout/fragment_splash.xml" value="0.25" />
       </map>
